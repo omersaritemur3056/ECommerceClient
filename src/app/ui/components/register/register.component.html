@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <form [formGroup]="frm" (ngSubmit)="onSubmit(frm.value)">
+            <div class="mb-3">
+                <label for="fullname" class="form-label">Ad Soyad</label>
+                <input type="text" class="form-control" id="fullname" formControlName="fullname"
+                [ngClass]="{'is-invalid' : submitted && component.fullname.errors}">
+                <div class="form-text" *ngIf="submitted && component.fullname.errors?.required">
+                    Ad Soyadı boş geçmeyiniz!
+                </div>
+                <div class="form-text" *ngIf="submitted && (component.fullname.errors?.minlength || 
+                component.fullname.errors?.maxlength)">
+                    Ad Soyadı 3 ile 50 karakter uzunluğu arasındadır!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="username" class="form-label">Kullanıcı Adı</label>
+                <input type="text" class="form-control" id="username" formControlName="username"
+                [ngClass]="{'is-invalid' : submitted && component.username.errors}">
+                <div class="form-text" *ngIf="submitted && component.username.errors?.required">
+                    Kullanıcı adını boş geçmeyiniz!
+                </div>
+                <div class="form-text" *ngIf="submitted && (component.username.errors?.minlength || 
+                component.fullname.errors?.maxlength)">
+                    Kullanıcı adı 3 ile 50 karakter uzunluğu arasındadır!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email"
+                [ngClass]="{'is-invalid' : submitted && component.email.errors}">
+                <div class="form-text" *ngIf="submitted && component.email.errors?.required">
+                    Email'i boş geçmeyiniz!
+                </div>
+                <div class="form-text" *ngIf="submitted && (component.email.errors?.minlength || 
+                component.fullname.errors?.maxlength)">
+                    Email 3 ile 50 karakter uzunluğu arasındadır!
+                </div>
+                <div class="form-text" *ngIf="submitted && component.email.errors?.email">
+                    Email formatında giriş yapınız!
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Şifre</label>
+                <input type="password" class="form-control" id="password" formControlName="password"
+                [ngClass]="{'is-invalid' : submitted && component.password.errors}">
+            </div>
+            <div class="mb-3">
+                <label for="passwordConfirm" class="form-label">Şifre Tekrar</label>
+                <input type="password" class="form-control" id="passwordConfirm" formControlName="passwordConfirm">
+                <div class="form-text" *ngIf="submitted && frm.hasError('notSame')">
+                    Şifre ile tekrarı aynı olmalıdır!
+                </div>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Kayıt ol!</button>
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+</div>
