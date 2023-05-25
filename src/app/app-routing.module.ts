@@ -21,6 +21,18 @@ const routes: Routes = [
         path: 'products', loadChildren: () => import('./admin/components/products/products.module')
           .then(module => module.ProductsModule), canActivate: [AuthGuard]
       },
+      {
+        path: 'authorize-menu', loadChildren: () => import('./admin/components/authorize-menu/authorize-menu.module')
+          .then(module => module.AuthorizeMenuModule), canActivate: [AuthGuard]
+      },
+      {
+        path: 'roles', loadChildren: () => import('./admin/components/role/role.module')
+          .then(module => module.RoleModule), canActivate: [AuthGuard]
+      },
+      {
+        path: 'users', loadChildren: () => import('./admin/components/user/user.module')
+          .then(module => module.UserModule), canActivate: [AuthGuard]
+      }
     ], canActivate: [AuthGuard]
   },
   { path: '', component: HomeComponent },

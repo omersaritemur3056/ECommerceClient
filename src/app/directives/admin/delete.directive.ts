@@ -46,6 +46,7 @@ export class DeleteDirective {
             height: "toogle"
           }, 700, () => {
             this.callback.emit();
+            this.spinner.hide(SpinnerType.ScaleMultiple);
             this.alertify.message(`${this.controller == 'roles' ? 'Rol' : 'Ürün'} başarıyla silinmiştir.`, {
               dismissOthers: true,
               messageType: MessageType.Success,

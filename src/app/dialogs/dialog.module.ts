@@ -17,6 +17,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatTableModule } from '@angular/material/table';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { AuthorizeMenuDialogComponent } from './authorize-menu-dialog/authorize-menu-dialog.component';
+import { AuthorizeUserDialogComponent } from './authorize-user-dialog/authorize-user-dialog.component';
 
 
 
@@ -29,7 +31,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     OrderDetailDialogComponent,
     CompleteOrderDialogComponent,
     OrderDetailDialogComponent,
-    ShoppingCompleteDialogComponent
+    ShoppingCompleteDialogComponent,
+    AuthorizeMenuDialogComponent,
+    AuthorizeUserDialogComponent
   ],
   imports: [
     CommonModule,
