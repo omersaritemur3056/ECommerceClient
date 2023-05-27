@@ -14,6 +14,7 @@ import { DeleteDirective } from 'src/app/directives/admin/delete.directive';
 import { FileUploadModule } from 'src/app/services/common/file-upload/file-upload.module';
 import { DialogModule } from 'src/app/dialogs/dialog.module';
 import { DeleteModule } from 'src/app/directives/admin/delete.module';
+import { QrcodeDialogComponent } from 'src/app/dialogs/qrcode-dialog/qrcode-dialog.component';
 
 
 @NgModule({
