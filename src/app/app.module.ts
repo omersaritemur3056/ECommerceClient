@@ -32,15 +32,18 @@ import { DynamicLoadComponentDirective } from './directives/common/dynamic-load-
     JwtModule.forRoot({
       config: {
         tokenGetter: () => localStorage.getItem("accessToken"),
-        allowedDomains: ["localhost:7240"]
+        //allowedDomains: ["localhost:7240"]
+        allowedDomains: ["ecommerceapiapi20230528012132.azurewebsites.net"]
       }
     }),
     SocialLoginModule,
     GoogleSigninButtonModule
   ],
   providers: [
-    {provide: "baseUrl", useValue: "https://localhost:7240/api", multi: true},
-    {provide: "baseSignalRUrl", useValue: "https://localhost:7240/", multi: true},
+    //{provide: "baseUrl", useValue: "https://localhost:7240/api", multi: true},
+    {provide: "baseUrl", useValue: "https://ecommerceapiapi20230528012132.azurewebsites.net/api", multi: true},
+    //{provide: "baseSignalRUrl", useValue: "https://localhost:7240/", multi: true},
+    {provide: "baseSignalRUrl", useValue: "https://ecommerceapiapi20230528012132.azurewebsites.net/", multi: true},
     {
       provide: "SocialAuthServiceConfig",
       useValue: {

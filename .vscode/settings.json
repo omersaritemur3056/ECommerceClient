@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/27695422-4858-4832-8719-d7afcab2b7f1/resourceGroups/Mini-E-Commerce/providers/Microsoft.Web/sites/miniecommerceclient",
+    "appService.deploySubpath": "dist"
+}
